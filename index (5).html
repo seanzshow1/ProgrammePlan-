@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NMAC | Making & Sharing 2028–2033</title>
+<style>
+:root{--ink:#1b2830;--mute:#61717b;--border:#cdd6dc;--paper:#f5f7f8;--card:#fff;--accent:#2459a9;--highlight:#eaf2ff;--learn:#eef7f3;--make:#f2effb;--show:#fff5e7;--row:#d9e1e8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14px}#nmac-board{max-width:1250px;margin:auto;padding:24px 18px 60px}h1{margin:0 0 6px;font-size:clamp(20px,3vw,29px);letter-spacing:-.03em}h2{font-size:16px;margin:0 0 7px}p{margin:0;line-height:1.5}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,.nmac-card:focus-visible,.slot:focus-visible{outline:3px solid #4b95e2;outline-offset:2px}.intro{max-width:850px;color:var(--mute);margin-bottom:16px}.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.toolbar button,.editor button{border:1px solid var(--border);padding:8px 11px;background:white;border-radius:8px;color:var(--ink)}.toolbar button:hover,.editor button:hover{border-color:var(--accent)}.toolbar button.primary,.editor button.primary{background:var(--accent);color:white;border-color:var(--accent)}.tip{border:1px solid #d5e0f0;background:#eef3fb;border-radius:9px;padding:11px 13px;margin:0 0 17px;font-size:13px}.columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;align-items:stretch}.programme{border:1px solid var(--border);background:#fff;border-radius:13px;overflow:hidden;display:flex;flex-direction:column;min-width:0}.phead{padding:14px 13px 12px;border-bottom:1px solid var(--border);min-height:101px}.phead b{font-size:16px;display:block;line-height:1.2}.phead small{display:block;margin-top:5px;font-size:12px;color:var(--mute);line-height:1.45}.stage{padding:11px 10px;flex:1;position:relative}.stage:not(:last-child){border-bottom:1px dashed var(--border)}.stage-learn{background:var(--learn)}.stage-make{background:var(--make)}.stage-show{background:var(--show)}.stage-make:before,.stage-show:before{content:"↓";position:absolute;left:calc(50% - 10px);top:-12px;font-weight:800;font-size:17px;line-height:20px;width:20px;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:20px;color:var(--mute);z-index:1}.stage-label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:#4a5966;margin-bottom:8px;display:flex;justify-content:space-between}.slot{border:1.5px dashed #bbc7cb;border-radius:9px;min-height:96px;padding:7px;display:flex;flex-direction:column;gap:7px;transition:background .1s,border-color .1s}.slot:hover{border-color:#7593b2}.slot.drop-target,.pool-slot.drop-target{background:#deebff;border-color:#2e67ae}.slot-hint{font-size:11px;color:#7c8990;text-align:center;padding:7px 4px}.nmac-card{display:flex;flex-direction:column;gap:4px;border:1px solid #cbd4dc;background:#fff;border-radius:8px;padding:9px 10px;cursor:grab;user-select:none;position:relative;box-shadow:0 1px 2px #0000000c;line-height:1.32}.nmac-card:active{cursor:grabbing}.nmac-card[aria-pressed="true"]{outline:2px solid var(--accent);border-color:var(--accent);background:#f0f6ff}.nmac-card.dragging{opacity:.4}.nmac-card .cardtitle{font-weight:680;font-size:13px;padding-right:10px}.nmac-card .sub{color:var(--mute);font-size:11px;line-height:1.35}.nmac-card .handle{position:absolute;top:7px;right:7px;color:#778895;font-size:13px}.stage-arrow{text-align:center;margin-top:5px;margin-bottom:-5px;color:#687984;font-size:17px;line-height:1}.pool-block{margin-top:17px;border:1px solid var(--border);border-radius:12px;background:white;padding:14px}.pool-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:10px}.pool-heading span{font-size:12px;color:var(--mute)}.pool-slot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:8px;min-height:80px;border:1.5px dashed #c6d0d8;border-radius:9px;padding:9px}.pool-slot .nmac-card{min-height:65px}.footer{font-size:12px;color:var(--mute);margin-top:12px;line-height:1.5}.editor{margin-top:17px;border:1.5px solid #9bb7db;background:#fff;border-radius:12px;padding:15px;display:none}.editor.visible{display:block}.editor-header{font-weight:700;font-size:14px;margin-bottom:5px}.editor-note{font-size:12px;color:var(--mute);margin-bottom:12px}.editor-fields{display:grid;grid-template-columns:1fr 1.5fr;gap:9px}.editor label{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:650}.editor input,.editor textarea,.editor select{border:1px solid var(--border);border-radius:7px;padding:8px;background:white;color:var(--ink);width:100%;font-size:13px}.editor textarea{resize:vertical;min-height:54px}.editor-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}.status{font-size:12px;color:var(--accent);min-height:18px}.key{display:flex;gap:8px;align-items:center;color:var(--mute);font-size:12px;margin:0 0 9px}.key span{padding:3px 6px;border-radius:5px;border:1px solid #ccd7df}.warn{color:#985317;font-size:12px}.skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}.linkline{font-size:12px;color:var(--mute);margin:8px 0 12px}
+@media(max-width:800px){#nmac-board{padding:17px 10px 40px}.columns{gap:8px}.phead{padding:10px 8px;min-height:120px}.phead b{font-size:13px}.phead small{font-size:10.5px}.stage{padding:8px 5px}.slot{padding:4px}.nmac-card{padding:8px 5px}.nmac-card .cardtitle{font-size:11px}.nmac-card .sub{font-size:10px}.stage-label{font-size:10px}.pool-slot{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.stage-make:before,.stage-show:before{content:"→";left:-10px;top:calc(50% - 10px)}.columns{grid-template-columns:1fr}.programme{display:grid;grid-template-columns:1fr 1fr}.phead{grid-column:1/-1;min-height:0}.stage:not(:last-child){border-right:1px dashed var(--border);border-bottom:0}.stage{min-width:0}.nmac-card .cardtitle{font-size:11px}.pool-slot{grid-template-columns:repeat(2,minmax(0,1fr))}.editor-fields{grid-template-columns:1fr}.stage-label{font-size:9px}.tip{font-size:12px}}
+
+/* NMAC colour system: three distinct public programme identities */
+:root{--ink:#1e2239;--mute:#596078;--border:#d7d9eb;--paper:#f8f6ff;--card:#fff;--accent:#5435cb;--learn:#e9fbf4;--make:#f2eaff;--show:#fff1d7}
+body{background:radial-gradient(ellipse at 12% 0%,#efe8ff 0%,transparent 38%),radial-gradient(ellipse at 92% 14%,#ddf8f3 0%,transparent 28%),#f9f8fe;min-height:100vh}
+#nmac-board{max-width:1390px;padding-top:36px}h1{font-size:clamp(27px,4vw,44px);font-weight:850;letter-spacing:-.05em;line-height:1.08}h1 span{display:inline-block;vertical-align:middle;margin-left:7px;letter-spacing:0}.intro{font-size:15px;margin-top:12px;max-width:790px}.toolbar{background:#ffffffb8;backdrop-filter:blur(8px);border:1px solid #dedbf1;border-radius:16px;padding:10px;position:sticky;top:8px;z-index:8;box-shadow:0 6px 24px #40307a10}.toolbar button{font-weight:650;border-radius:9px;transition:transform .15s,background .15s}.toolbar button:hover{transform:translateY(-1px);background:#f2edff}.toolbar button.primary{background:#5435cb;color:white}.toolbar button.primary:hover{background:#4325b8}.tip{background:#eeeaff;border-color:#d9ceff;border-left:5px solid #7354ea;color:#30245f;border-radius:12px;padding:13px 16px}.columns{gap:17px}.programme{border:none;border-radius:19px;box-shadow:0 7px 30px #35266c17;overflow:hidden}.programme:nth-child(1){--identity:#6945e8;--identity-light:#e9e3ff}.programme:nth-child(2){--identity:#d25482;--identity-light:#ffe3ed}.programme:nth-child(3){--identity:#0d9d9a;--identity-light:#ddf8f2}.phead{background:var(--identity);color:white;min-height:124px;padding:20px 18px}.phead b{font-size:20px;letter-spacing:-.025em}.phead small{color:#ffffffde;font-size:12px;margin-top:9px}.stage{padding:15px 12px}.stage-learn{background:#e8f8ee}.stage-make{background:#f0eafe}.stage-show{background:#fff0d6}.stage-label{color:#383d58;font-size:11px;margin-bottom:10px}.stage-learn .stage-label{color:#16775a}.stage-make .stage-label{color:#6638ad}.stage-show .stage-label{color:#986020}.slot{border:1.5px dashed #b9b7cd;border-radius:12px;min-height:102px;padding:8px}.slot:hover{border-color:var(--identity)}.nmac-card{border:1px solid #e0dcf0;border-left:4px solid var(--identity,#8669d6);border-radius:11px;padding:12px 11px;background:#fff;box-shadow:0 3px 8px #35266c10;transition:transform .14s,box-shadow .14s}.nmac-card:hover{transform:translateY(-2px);box-shadow:0 7px 18px #35266c1e}.nmac-card .cardtitle{font-size:13px;color:#292444}.nmac-card .sub{color:#62627a;font-size:11.5px}.nmac-card[aria-pressed=true]{background:#eee8ff;border-color:#6945e8;outline:2px solid #6945e8}.slot.drop-target,.pool-slot.drop-target{background:#e8ddff;border-color:#6945e8;box-shadow:inset 0 0 0 1px #6945e8}.stage-make:before,.stage-show:before{background:white;color:var(--identity);border-color:var(--identity-light)}.pool-block{border:1px solid #d8d1f2;border-radius:18px;padding:19px;background:#fff;box-shadow:0 5px 22px #35266c0c}.pool-heading h2{font-size:19px}.pool-slot{border-radius:12px;background:#faf9ff}.pool-slot .nmac-card{--identity:#8072bf}.editor{border:2px solid #7255df;border-radius:16px;padding:20px;box-shadow:0 8px 30px #35266c17}.editor-header{font-size:18px}.editor input,.editor textarea{border-radius:9px}.editor button.primary{background:#5435cb}.footer{padding-bottom:25px}.status{color:#4128ad;font-weight:600}.toolbar button:disabled{opacity:.45;cursor:default}
+@media(max-width:800px){.phead b{font-size:15px}.phead{min-height:125px}.stage{padding:10px 6px}.nmac-card{padding:9px 7px}.toolbar{top:0}}
+@media(max-width:550px){#nmac-board{padding:20px 10px}.columns{gap:15px}.programme{display:grid;grid-template-columns:1fr 1fr}.phead{min-height:0;padding:14px;grid-column:1/-1}.phead b{font-size:18px}.phead small{font-size:12px}.stage{padding:12px 5px}.stage-label{font-size:9px}.slot{padding:4px}.nmac-card .cardtitle{font-size:11px}.nmac-card .sub{font-size:10px}.toolbar{position:static}.pool-slot{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.nmac-card,.toolbar button{transition:none}}
+
+/* Making & Sharing colour direction */
+:root{--paper:#f8f6ff;--ink:#242037;--accent:#5c34d5;--border:#ded9f0}
+.programme:nth-child(1){--identity:#6740e2;--identity-light:#e9dfff}
+.programme:nth-child(2){--identity:#e04f80;--identity-light:#ffe2ec}
+.programme:nth-child(3){--identity:#008f9e;--identity-light:#d6f7f8}
+.stage-make{background:#f1ebff}.stage-show{background:#fff0d2}
+.stage-show:before{content:'↓'}.stage-make:before{content:none}
+.stage-make .stage-label{color:#6638ad}.stage-show .stage-label{color:#985020}
+.nmac-card{border-left-width:5px}
+#nmac-board h1{max-width:950px}
+#nmac-board h1::first-letter{color:#6740e2}
+.play-space{margin-top:20px;background:#171b34;color:#fff;padding:21px;border-radius:18px;box-shadow:0 10px 40px #34246b20}
+.play-space h2{font-size:20px;margin-bottom:6px}
+.play-space p{color:#d0d2e4;font-size:12px;margin-bottom:15px}
+.play-arena{height:310px;position:relative;border:1px dashed #8588aa;border-radius:14px;background-image:radial-gradient(#787b9f38 1px,transparent 1px);background-size:19px 19px;overflow:hidden}
+.play-sticky{position:absolute;width:180px;min-height:85px;display:grid;place-content:center;padding:12px;border-radius:12px;font-size:13px;color:#22213a;font-weight:700;box-shadow:0 8px 15px #05061540;touch-action:none;cursor:grab;text-align:center}
+.play-sticky:nth-child(1){left:4%;top:10%;background:#fee67d;transform:rotate(-2deg)}
+.play-sticky:nth-child(2){left:29%;top:38%;background:#ffaaca;transform:rotate(2deg)}
+.play-sticky:nth-child(3){left:55%;top:9%;background:#8cf1db;transform:rotate(-2deg)}
+.play-sticky:nth-child(4){left:76%;top:52%;background:#c2adff;transform:rotate(2deg)}
+.play-hint{font-size:11px;color:#d0d2e4;margin-top:9px}
+@media(max-width:580px){.play-arena{height:440px}.play-sticky{width:125px;font-size:11px}.play-sticky:nth-child(2){left:44%;top:28%}.play-sticky:nth-child(3){left:5%;top:53%}.play-sticky:nth-child(4){left:53%;top:73%}.programme{grid-template-columns:1fr 1fr!important}}
+</style>
+</head>
+<body>
+<div id="nmac-board">
+<h1>Making & Sharing <span style="font-size:14px;font-weight:500;color:var(--mute)">2028–2033</span></h1>
+<p class="intro">NMAC’s editable five-year programme model. Making includes workshops, courses, research and paid bootcamps. Sharing includes exhibitions, performances, festival activity and public exchange. Every major public programme is connected to a bootcamp and at least one workshop.</p>
+<div class="toolbar"><button id="undo" type="button">↶ Undo move</button><button id="add" type="button">＋ Add activity</button><button id="copy" class="primary" type="button">Copy current plan</button><button id="export" type="button">↓ Export JSON</button><button id="import" type="button">↑ Import JSON</button><input id="import-file" type="file" accept="application/json,.json" hidden><button id="reset" type="button">Reset</button><span class="status" id="status" aria-live="polite"></span></div>
+<div class="tip"><strong>Try rearranging it:</strong> Drag a card to another box. On a phone, tap a card, then tap the box where it should go. Tap a card to edit its wording below. Your changes save automatically in this browser. Export JSON to move your plan to another device or keep a backup.</div>
+<div id="columns" class="columns"></div>
+<section class="pool-block"><div class="pool-heading"><h2>Flexible and cross-programme activity</h2><span>Move these into any strand, or leave them shared.</span></div><div class="pool-slot" data-programme="pool" data-stage="pool" tabindex="0" aria-label="Flexible and cross-programme activity drop area" id="pool"></div></section>
+<div id="editor" class="editor"><div class="editor-header" id="editor-title">Edit activity</div><div class="editor-note">Edit its name or description. To change where it sits, move the card on the board.</div><div class="editor-fields"><label>Activity name<input id="edit-name"/></label><label>What it does<textarea id="edit-detail"></textarea></label></div><div class="editor-actions"><button class="primary" id="save" type="button">Save wording</button><button id="duplicate" type="button">Duplicate card</button><button id="remove" type="button">Remove card</button><button id="deselect" type="button">Close</button></div></div>
+
+<section class="play-space" aria-label="Shared PlayHTML sketch area">
+ <h2>Shared idea space · PlayHTML</h2>
+ <p>Move these prompts around to sketch relationships and questions. This optional space uses PlayHTML when online. Positions may be visible to other visitors. Keep private information on the main board.</p>
+ <div id="play-arena" class="play-arena">
+  <div id="nmac-note-makers" class="play-sticky" can-move can-move-bounds="play-arena">Who is making?</div>
+  <div id="nmac-note-process" class="play-sticky" can-move can-move-bounds="play-arena">What is being explored?</div>
+  <div id="nmac-note-public" class="play-sticky" can-move can-move-bounds="play-arena">How is it shared?</div>
+  <div id="nmac-note-next" class="play-sticky" can-move can-move-bounds="play-arena">What happens next?</div>
+ </div>
+ <div class="play-hint" id="play-status">The main board saves locally. The shared sketch space requires PlayHTML and an internet connection.</div>
+</section>
+<div class="footer">Making leads into sharing, and what is shared generates new ideas for making. An activity may contribute to more than one programme even when its card sits in one place. Specialist partnership residencies and venue arrangements remain proposed until agreed.</div>
+</div>
+<script>
+(function(){
+ const root=document.getElementById('nmac-board');
+ const P=[{id:'computala',name:'COMPUTALA',sub:'Computer art, interaction and games. A national festival as well as a place to present new work.'},{id:'sound',name:'Sound Art & Electronic Music',sub:'Annual exhibition and performances at LCB Depot.'},{id:'visual',name:'Visual Art & Moving Image',sub:'Annual exhibition and screenings. Venue to be confirmed.'}];
+ const stages=[{id:'making',name:'1 · MAKING: learn, research, produce'},{id:'sharing',name:'2 · SHARING: meet audiences'}];
+ const seed=[
+  {id:'cw',name:'COMPUTALA workshop',detail:'At least one workshop connected to the festival',programme:'computala',stage:'making'},
+  {id:'cb',name:'Paid artist bootcamp',detail:'Experimental computer art, interaction or games',programme:'computala',stage:'making'},
+  {id:'cs',name:'COMPUTALA festival',detail:'Bootcamp/course work plus invited artists, commissions, talks, performances and public activity',programme:'computala',stage:'sharing'},
+  {id:'sw',name:'Sound workshop',detail:'At least one workshop connected to the sound programme',programme:'sound',stage:'making'},
+  {id:'sb',name:'Paid artist bootcamp',detail:'Make work for the sound programme',programme:'sound',stage:'making'},
+  {id:'sr',name:'Synthi 100 residency',detail:'Specialist research, making and performance (proposed partnership)',programme:'sound',stage:'making'},
+  {id:'ss',name:'Sound Art programme',detail:'Annual exhibition and performances, including work from the bootcamp',programme:'sound',stage:'sharing'},
+  {id:'vw',name:'Visual / moving-image workshop',detail:'At least one workshop connected to the visual programme',programme:'visual',stage:'making'},
+  {id:'vb',name:'Paid artist bootcamp',detail:'Develop visual, moving-image and multimedia work',programme:'visual',stage:'making'},
+  {id:'vs',name:'Visual Art / Moving Image',detail:'Annual exhibition and screenings, including work from the bootcamp',programme:'visual',stage:'sharing'},
+  {id:'l1',name:'Six-week course 1',detail:'Topic and public sharing to be determined',programme:'pool',stage:'pool'},
+  {id:'l2',name:'Six-week course 2',detail:'Topic and public sharing to be determined',programme:'pool',stage:'pool'},
+  {id:'l3',name:'Six-week course 3',detail:'Topic and public sharing to be determined',programme:'pool',stage:'pool'},
+  {id:'ar',name:'Computer Arts Archive residency',detail:'Research historical computer art and create new work (proposed partnership)',programme:'pool',stage:'pool'},
+  {id:'fw',name:'Responsive workshops',detail:'Additional ticketed and pay-as-you-feel activity',programme:'pool',stage:'pool'},
+  {id:'tc',name:'Troubleshoot Crit Clubs',detail:'Ongoing peer exchange and feedback',programme:'pool',stage:'pool'},
+  {id:'cq',name:'CQ Earlies family sessions',detail:'Family digital arts activity with LCB Depot',programme:'pool',stage:'pool'},
+  {id:'pub',name:'Online sharing / publishing',detail:'Where appropriate, including research, artworks and publications',programme:'pool',stage:'pool'}
+ ];
+ const storageKey='nmac-making-sharing-v1';
+ let restored=null;try{restored=JSON.parse(localStorage.getItem(storageKey)||'null');}catch(e){}
+ let cards=Array.isArray(restored)&&restored.every(c=>typeof c.id==='string'&&typeof c.name==='string'&&typeof c.programme==='string'&&typeof c.stage==='string')?restored:JSON.parse(JSON.stringify(seed)),selected=null,history=[],dragged=null,next=Date.now();
+ const $=(s)=>root.querySelector(s);
+ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ function snap(){history.push(JSON.stringify(cards));if(history.length>50)history.shift();}
+ function cardHTML(c){return `<div class="nmac-card" draggable="true" tabindex="0" role="button" aria-pressed="${selected===c.id}" data-id="${esc(c.id)}"><span class="handle" aria-hidden="true">⠿</span><div class="cardtitle">${esc(c.name)}</div><div class="sub">${esc(c.detail)}</div></div>`;}
+ function render(){
+   try{localStorage.setItem(storageKey,JSON.stringify(cards));}catch(e){}
+   $('#columns').innerHTML=P.map(p=>`<div class="programme"><header class="phead"><b>${esc(p.name)}</b><small>${esc(p.sub)}</small></header>${stages.map((s,i)=>`<section class="stage stage-${['make','show'][i]}"><div class="stage-label">${esc(s.name)} <span>${cards.filter(c=>c.programme===p.id&&c.stage===s.id).length}</span></div><div class="slot" tabindex="0" data-programme="${p.id}" data-stage="${s.id}" aria-label="${esc(s.name)} in ${esc(p.name)}">${cards.filter(c=>c.programme===p.id&&c.stage===s.id).map(cardHTML).join('')||'<span class="slot-hint">Drop activity here</span>'}</div></section>`).join('')}</div>`).join('');
+   $('#pool').innerHTML=cards.filter(c=>c.programme==='pool').map(cardHTML).join('')||'<div class="slot-hint">Nothing in the flexible area</div>';
+   $('#undo').disabled=history.length===0;
+   $('#editor').classList.toggle('visible',!!selected&&cards.some(c=>c.id===selected));
+   if(selected&&cards.some(c=>c.id===selected)){const c=cards.find(c=>c.id===selected);$('#editor-title').textContent='Selected: '+c.name;$('#edit-name').value=c.name;$('#edit-detail').value=c.detail;}
+   bindDnD();
+ }
+ function select(id){selected=selected===id?null:id;render();}
+ function move(id,programme,stage,before){const c=cards.find(c=>c.id===id);if(!c)return;if(c.programme===programme&&c.stage===stage&&!before)return;snap();cards=cards.filter(x=>x.id!==id);c.programme=programme;c.stage=stage;const i=before?cards.findIndex(x=>x.id===before):-1;if(i>=0)cards.splice(i,0,c);else cards.push(c);render();message('Activity moved');}
+ function message(s){$('#status').textContent=s;}
+ function bindDnD(){
+  root.querySelectorAll('.nmac-card').forEach(el=>{
+   el.addEventListener('click',e=>{e.stopPropagation();select(el.dataset.id);});
+   el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(el.dataset.id);}});
+   el.addEventListener('dragstart',e=>{dragged=el.dataset.id;e.dataTransfer.setData('text/plain',dragged);e.dataTransfer.effectAllowed='move';el.classList.add('dragging');});
+   el.addEventListener('dragend',()=>{dragged=null;root.querySelectorAll('.drop-target').forEach(x=>x.classList.remove('drop-target'));});
+  });
+  root.querySelectorAll('[data-programme][data-stage]').forEach(zone=>{
+   zone.addEventListener('click',e=>{if(e.target.closest('.nmac-card'))return;if(selected)move(selected,zone.dataset.programme,zone.dataset.stage);});
+   zone.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&selected){e.preventDefault();move(selected,zone.dataset.programme,zone.dataset.stage);}});
+   zone.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='move';zone.classList.add('drop-target');});
+   zone.addEventListener('dragleave',e=>{if(!zone.contains(e.relatedTarget))zone.classList.remove('drop-target');});
+   zone.addEventListener('drop',e=>{e.preventDefault();e.stopPropagation();zone.classList.remove('drop-target');const id=dragged||e.dataTransfer.getData('text/plain');const card=e.target.closest('.nmac-card');move(id,zone.dataset.programme,zone.dataset.stage,card&&card.dataset.id!==id?card.dataset.id:null);dragged=null;});
+  });
+ }
+ $('#save').addEventListener('click',()=>{const c=cards.find(c=>c.id===selected);if(!c)return;const name=$('#edit-name').value.trim();if(!name){message('Please enter an activity name');return;}snap();c.name=name;c.detail=$('#edit-detail').value.trim();render();message('Activity updated');});
+ $('#deselect').addEventListener('click',()=>{selected=null;render();});
+ $('#remove').addEventListener('click',()=>{if(!selected)return;snap();cards=cards.filter(c=>c.id!==selected);selected=null;render();message('Card removed (Undo to restore)');});
+ $('#duplicate').addEventListener('click',()=>{const c=cards.find(c=>c.id===selected);if(!c)return;snap();let nc={...c,id:'added'+(++next),name:c.name+' (copy)'};cards.push(nc);selected=nc.id;render();message('Card duplicated');});
+ $('#undo').addEventListener('click',()=>{if(history.length){cards=JSON.parse(history.pop());selected=null;render();message('Undone');}});
+ $('#reset').addEventListener('click',()=>{if(!confirm('Reset the board to its starting arrangement?'))return;snap();cards=JSON.parse(JSON.stringify(seed));selected=null;render();message('Starting layout restored');});
+ $('#add').addEventListener('click',()=>{const name=prompt('Name of new activity');if(!name||!name.trim())return;snap();let c={id:'added'+(++next),name:name.trim(),detail:'Edit this description',programme:'pool',stage:'pool'};cards.push(c);selected=c.id;render();$('#edit-detail').focus();message('Activity added to the flexible area');});
+ $('#export').addEventListener('click',()=>{const data=JSON.stringify({format:'nmac-programme-board',version:1,exported:new Date().toISOString(),cards},null,2);const blob=new Blob([data],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='nmac-programme-plan.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1500);message('Programme exported as JSON');});
+ $('#import').addEventListener('click',()=>$('#import-file').click());
+ $('#import-file').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{const data=JSON.parse(await f.text());const items=Array.isArray(data)?data:data.cards;if(!Array.isArray(items)||!items.every(c=>c&&typeof c.id==='string'&&typeof c.name==='string'&&typeof c.detail==='string'&&['pool','computala','sound','visual'].includes(c.programme)&&(['making','sharing'].includes(c.stage)||c.programme==='pool'&&c.stage==='pool')))throw Error('Invalid programme file');snap();cards=items;selected=null;render();message('Programme imported');}catch(err){message('Could not import: '+err.message);}e.target.value='';});
+ $('#copy').addEventListener('click',async()=>{let lines=['NMAC Making & Sharing 2028–2033 (working arrangement)',''];for(const p of P){lines.push(p.name);for(const s of stages){const group=cards.filter(c=>c.programme===p.id&&c.stage===s.id);lines.push('  '+s.name+': '+(group.length?group.map(c=>c.name+(c.detail?' — '+c.detail:'')).join('; '):'(none)'));}lines.push('');}lines.push('Flexible / cross-programme:');for(const c of cards.filter(c=>c.programme==='pool'))lines.push('  '+c.name+(c.detail?' — '+c.detail:''));let t=lines.join('\n');try{await navigator.clipboard.writeText(t);message('Current programme copied. Paste it into this chat to discuss changes.');}catch(e){const ta=document.createElement('textarea');ta.value=t;root.appendChild(ta);ta.select();let ok=document.execCommand('copy');ta.remove();message(ok?'Programme copied':'Clipboard unavailable: select and copy the plan manually.');}});
+ render();
+})();
+</script>
+<script type="module">
+try {
+ const {playhtml}=await import('https://unpkg.com/playhtml');
+ await playhtml.init();
+ document.getElementById('play-status').textContent='PlayHTML connected. Drag the idea notes. Their positions are shared and persist online. Shift-click a note to reset it.';
+} catch (error) {
+ document.getElementById('play-status').textContent='PlayHTML could not connect. The main editable programme board still works and saves locally.';
+}
+</script>
+</body>
+</html>
